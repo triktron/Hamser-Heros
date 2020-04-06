@@ -9,7 +9,7 @@ if [ -z "$buildfolder" ]; then
 fi
 
 if [ ! -d ./tmp ]; then
-  git clone "https://${nickname}:${githubkey}@github.com/${nickname}/${repositorie}"-b WebGL ./tmp
+  git clone "https://${nickname}:${githubkey}@github.com/${nickname}/${repositorie}"-b gh-pages ./tmp
 fi
 cp -r "$buildfolder" ./tmp
 cd ./tmp
