@@ -27,7 +27,7 @@ public class CameraFollowController : MonoBehaviour
 
 	private void Awake()
 	{
-		LastTargetPos = objectToFollow.position + Vector3.up * offset.y;
+		LastTargetPos = objectToFollow.position + Vector3.up * offset.y + Vector3.right * offset.x;
 	}
 
 	public void LookAtTarget()
@@ -82,9 +82,9 @@ public class CameraFollowController : MonoBehaviour
 		center.y = transform.transform.position.y;
 
 		LastTargetPos =  RotatePointAroundPivot(transform.transform.position, center, Vector3.up * angle);
-		//transform.transform.position = LastTargetPos;
+		transform.transform.position = LastTargetPos;
 
-		//transform.LookAt(objectToFollow);
+		transform.LookAt(objectToFollow);
 	}
 
 	Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles)

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1941419462990870780}
   - component: {fileID: 1941419462990870657}
   - component: {fileID: 1941419462990870656}
+  - component: {fileID: 5850085}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941419462990870781}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aabda0036dbf044e8e839a0610c119e, type: 3}
   m_Name: 
@@ -136,6 +137,26 @@ MonoBehaviour:
   ManualRotateSpeed: 30
   Stationary: 0
   Mode: 3
+--- !u!114 &5850085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941419462990870781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a97adbc51521a4e9af432d8206295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: {x: 4.06, y: 2.65, z: 0}
+  Player: {fileID: 0}
+  Speed: 190
+  MaxDeg: 720
+  OffsetDeg: 0
+  ScriptToEnable:
+  - {fileID: 0}
+  - {fileID: 1941419462990870656}
 --- !u!1 &1941419463567292712
 GameObject:
   m_ObjectHideFlags: 0

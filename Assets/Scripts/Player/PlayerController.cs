@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     Vector3 Movement;
     Rigidbody rb;
+    CharacterController cc;
 
     public bool IsOnGround;
 
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit info;
         IsOnGround = Physics.Raycast(transform.position, Vector3.down, out info, GroundScanLength);
 
-        rb.drag = (Movement == Vector3.zero && !IsOnLayerMask(info.collider.gameObject.layer, SlippyLayers)) ? DragSpeed.x : DragSpeed.y;
+        //rb.drag = (Movement == Vector3.zero && !IsOnLayerMask(info.collider.gameObject.layer, SlippyLayers)) ? DragSpeed.x : DragSpeed.y;
 
         if (IsOnGround) rb.AddForce(Movement * Speed);
     }
