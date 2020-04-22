@@ -5,8 +5,19 @@ more info to come soon (i hope)
 
 # Changelog
 
-## [0.0.3] - 2020-21-04
+## [0.0.4] - 2020-22-04
 > [play link](https://triktron.com/Hamser-Heros)
+
+### Added
+- highscore system
+- menu animations
+- settings menu
+
+### Fixed
+- mouse not releasing after returning to the menu
+
+## [0.0.3] - 2020-21-04
+> [play link](https://triktron.com/Hamser-Heros/0.0.3)
 
 ### Added
 - cat paw trail
