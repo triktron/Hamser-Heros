@@ -6,7 +6,7 @@ more info to come soon (i hope)
 # Changelog
 
 ## [0.0.4] - 2020-22-04
-> [play link](https://triktron.com/Hamser-Heros)
+> [play link](http://triktron.com/Hamser-Heros)
 
 ### Added
 - highscore system
@@ -17,7 +17,7 @@ more info to come soon (i hope)
 - mouse not releasing after returning to the menu
 
 ## [0.0.3] - 2020-21-04
-> [play link](https://triktron.com/Hamser-Heros/0.0.3)
+> [play link](http://triktron.com/Hamser-Heros/0.0.3)
 
 ### Added
 - cat paw trail
@@ -31,7 +31,7 @@ more info to come soon (i hope)
 - paws now only show on the ground, not midair.
 
 ## [0.0.2] - 2020-21-04
-> [play link](https://triktron.com/Hamser-Heros/0.0.2)
+> [play link](http://triktron.com/Hamser-Heros/0.0.2)
 
 ### Added
 - start timer
@@ -45,7 +45,7 @@ more info to come soon (i hope)
 
 
 ## [0.0.1] - 2020-21-04
-> [play link](https://triktron.com/Hamser-Heros/0.0.1)
+> [play link](http://triktron.com/Hamser-Heros/0.0.1)
 
 ### Added
 
