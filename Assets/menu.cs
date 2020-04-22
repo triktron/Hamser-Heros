@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
@@ -8,7 +10,39 @@ using UnityEngine.UI;
 
 public class menu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public TMP_InputField Nickname;
+    public TMP_Text Scores;
+
+    public MouseLock MouseLockScript;
+
+    private void Start()
+    {
+        Nickname.text = GameStateManager.Username;
+        Highscores.instance.DownloadHighscores(UpdateScores);
+        MouseLockScript.Unlock();
+    }
+
+    public void UpdateScores()
+    {
+        StringBuilder str = new StringBuilder("");
+
+        for (int i = 0; i < Highscores.instance.highscoresList.Length; i++)
+        {
+            str.AppendFormat("{0}. <b><color=\"red\">{1}<color=\"white\"></b> with {2} seconds on {3}\n", i + 1, Highscores.instance.highscoresList[i].username, Highscores.instance.highscoresList[i].time.ToString("F3"), GameStateManager.GetDificultyName(Highscores.instance.highscoresList[i].dif));
+        }
+
+        Scores.SetText(str.ToString());
+
+        RectTransform parrent = Scores.transform.parent.GetComponent<RectTransform>();
+
+        parrent.sizeDelta = new Vector2(parrent.sizeDelta.x, Scores.preferredHeight);
+
+    }
+
+    public void SetNickname()
+    {
+        GameStateManager.Username = Nickname.text;
+    }
 
     public RectTransform Sldier;
     public InputSystemUIInputModule InputModule;

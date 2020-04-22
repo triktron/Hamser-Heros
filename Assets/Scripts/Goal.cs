@@ -29,6 +29,13 @@ public class Goal : MonoBehaviour
         {
             { "time_elapsed", Timer.GetTime() }
         });
+        Analytics.FlushEvents();
+
+        if (GameStateManager.IsTimeBetter(Timer.GetTime()))
+        {
+            GameStateManager.BestTime = Timer.GetTime();
+            Highscores.AddNewHighscore(GameStateManager.Username, Timer.GetTime(), GameStateManager.Dificulty, "level1");
+        }
 
         enabled = false;
     }
