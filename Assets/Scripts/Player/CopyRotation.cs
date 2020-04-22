@@ -15,10 +15,6 @@ public class CopyRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Object.rotation.eulerAngles.y);
-
-
-
         ps.startRotationZ = -(Object.rotation.eulerAngles.y) * Mathf.Deg2Rad;
         transform.position = Object.position - Offset;
     }

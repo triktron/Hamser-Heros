@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;    
 
 public class Goal : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Goal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Timer.StopTimer();
         foreach (MonoBehaviour component in ScriptToEnable)
         {
             component.enabled = true;
@@ -22,6 +24,12 @@ public class Goal : MonoBehaviour
         {
             component.isKinematic = true;
         }
+
+        Analytics.CustomEvent("level_one_timer", new Dictionary<string, object>
+        {
+            { "time_elapsed", Timer.GetTime() }
+        });
+
         enabled = false;
     }
 }

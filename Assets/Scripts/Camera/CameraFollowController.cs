@@ -27,7 +27,8 @@ public class CameraFollowController : MonoBehaviour
 
 	private void Awake()
 	{
-		LastTargetPos = objectToFollow.position + Vector3.up * offset.y + Vector3.right * offset.x;
+		//LastTargetPos = objectToFollow.position + Vector3.up * offset.y + Vector3.right * offset.x;
+		LastTargetPos = transform.position;
 	}
 
 	public void LookAtTarget()

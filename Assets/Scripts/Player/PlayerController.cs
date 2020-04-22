@@ -7,13 +7,13 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed = 100;
 
-    public Vector2 DragSpeed;
     public float GroundScanLength;
     public LayerMask SlippyLayers;
 
     Vector3 Movement;
     Rigidbody rb;
-    CharacterController cc;
+
+    public ParticleSystem Paws;
 
     public bool IsOnGround;
 
@@ -21,6 +21,11 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Start()
+    {
+        Timer.StartTimer();
     }
 
 
@@ -35,6 +40,8 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(transform.position, left * 2, Color.green);
         Debug.DrawRay(transform.position, Movement * 2, Color.magenta);
         Debug.DrawRay(transform.position, Vector3.down * GroundScanLength);
+
+        Paws.enableEmission = IsOnGround;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -59,8 +66,6 @@ public class PlayerController : MonoBehaviour
     {
         RaycastHit info;
         IsOnGround = Physics.Raycast(transform.position, Vector3.down, out info, GroundScanLength);
-
-        //rb.drag = (Movement == Vector3.zero && !IsOnLayerMask(info.collider.gameObject.layer, SlippyLayers)) ? DragSpeed.x : DragSpeed.y;
 
         if (IsOnGround) rb.AddForce(Movement * Speed);
     }

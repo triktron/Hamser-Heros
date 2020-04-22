@@ -10,12 +10,14 @@ more info to come soon (i hope)
 
 ### Added
 - cat paw trail
+- added a basic menu
+- added a difficulty selector
 
 ### Changed
-- fill in
+- when you win you now return to the menu
 
 ### Fixed
-- fill in
+- paws now only show on the ground, not midair.
 
 ## [0.0.2] - 2020-21-04
 > [play link](https://triktron.com/Hamser-Heros/0.0.2)
