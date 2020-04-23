@@ -59,7 +59,7 @@ public class menu : MonoBehaviour
         // Sldier.localPosition = Vector3.left * i * 1920;
         InputModule.enabled = false;
         if (lastLeanId != -1) LeanTween.cancel(lastLeanId);
-        lastLeanId = LeanTween.move(Sldier, Vector3.left * i * 1920, TransitionTime).setOnComplete(() => { InputModule.enabled = true; }).setEase(typ).id;
+        lastLeanId = LeanTween.move(Sldier, Vector3.left * i * Screen.width, TransitionTime).setOnComplete(() => { InputModule.enabled = true; }).setEase(typ).id;
     }
 
     public void GoToPageVertical(int i)
@@ -67,7 +67,7 @@ public class menu : MonoBehaviour
         // Sldier.localPosition = Vector3.left * i * 1920;
         InputModule.enabled = false;
         if (lastLeanId != -1) LeanTween.cancel(lastLeanId);
-        lastLeanId = LeanTween.move(Sldier, Vector3.down * i * 1080, TransitionTime).setOnComplete(() => { InputModule.enabled = true; }).setEase(typ).id;
+        lastLeanId = LeanTween.move(Sldier, Vector3.down * i * Screen.height, TransitionTime).setOnComplete(() => { InputModule.enabled = true; }).setEase(typ).id;
     }
 
     public void Exit()

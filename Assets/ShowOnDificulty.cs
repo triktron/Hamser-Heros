@@ -17,6 +17,12 @@ public class ShowOnDificulty : MonoBehaviour
 
     public void Check()
     {
+
+
+
+
+
+
         bool should = (int)Dificulty <= (int)GameStateManager.Dificulty;
         if (Show) should = (int)Dificulty >= (int)GameStateManager.Dificulty;
 

@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.0.4] - 2020-22-04
+## [0.0.5] - 2020-23-04
 > [play link](http://triktron.com/Hamser-Heros)
 
 ### Added
