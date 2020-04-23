@@ -13,13 +13,10 @@ public class menu : MonoBehaviour
     public TMP_InputField Nickname;
     public TMP_Text Scores;
 
-    public MouseLock MouseLockScript;
-
     private void Start()
     {
         Nickname.text = GameStateManager.Username;
         Highscores.instance.DownloadHighscores(UpdateScores);
-        MouseLockScript.Unlock();
     }
 
     public void UpdateScores()

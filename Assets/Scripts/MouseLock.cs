@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class MouseLock : MonoBehaviour
 {
-#if (!UNITY_EDITOR)
+    public bool LockOnStart;
+#if !UNITY_EDITOR
     void Start()
     {
-        Lock();
+        if (LockOnStart)
+            Lock();
+        else
+            Unlock();
     }
 #endif
 

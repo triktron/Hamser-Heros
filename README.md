@@ -9,12 +9,21 @@ more info to come soon (i hope)
 > [play link](http://triktron.com/Hamser-Heros)
 
 ### Added
+- platforms that show or hide depending on difficulty
+
+### Fixed
+- mouse not releasing after returning to the menu
+
+## [0.0.4] - 2020-22-04
+> [play link](http://triktron.com/Hamser-Heros/0.0.4)
+
+### Added
 - highscore system
 - menu animations
 - settings menu
 
 ### Fixed
-- mouse not releasing after returning to the menu
+- mouse not releasing after returning to the menu (didn't fix it all the time)
 
 ## [0.0.3] - 2020-21-04
 > [play link](http://triktron.com/Hamser-Heros/0.0.3)
