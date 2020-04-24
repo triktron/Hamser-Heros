@@ -19,6 +19,7 @@
 
 ### Fixed
 - mouse not releasing after returning to the menu (didn't fix it all the time)
+- fixed the menu size (for good i hope)
 
 ## [0.0.3] - 2020-21-04
 > [play link](http://triktron.com/Hamser-Heros/0.0.3)

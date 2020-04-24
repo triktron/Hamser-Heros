@@ -5,11 +5,25 @@ more info to come soon (i hope)
 
 # Changelog
 
-## [0.0.5] - 2020-23-04
+## [0.0.6] - 2020-24-04
 > [play link](http://triktron.com/Hamser-Heros)
 
 ### Added
+- speed bar
+- scoreboard now displays all difficulties
+- second level
+
+### Changed
+- Timer now resets when you die
+- you can now see the highscores per levels
+- the highscores now get saved based on name, difficulty and level, meaning you can have more then one entry.
+
+## [0.0.5] - 2020-23-04
+> [play link](http://triktron.com/Hamser-Heros/0.0.5)
+
+### Added
 - platforms that show or hide depending on difficulty
+- scoreboard basics
 
 ### Fixed
 - mouse not releasing after returning to the menu
@@ -24,6 +38,7 @@ more info to come soon (i hope)
 
 ### Fixed
 - mouse not releasing after returning to the menu (didn't fix it all the time)
+- fixed the menu size (for good i hope)
 
 ## [0.0.3] - 2020-21-04
 > [play link](http://triktron.com/Hamser-Heros/0.0.3)
