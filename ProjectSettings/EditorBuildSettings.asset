@@ -5,22 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Triktron/Scenes/Main.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Triktron/Scenes/RollABall.unity
-    guid: 668df36ca9871d845a75360dc0e5bcb8
   - enabled: 1
     path: Assets/Triktron/Scenes/Menu.unity
     guid: 112a54a9e3771664fa772dfa65d8bce2
   - enabled: 1
-    path: Assets/Triktron/Scenes/levels/Level1.unity
+    path: Assets/Triktron/Scenes/levels/Level1-1.unity
     guid: 51ced932a1668594386fa57478a5740d
   - enabled: 1
-    path: Assets/Triktron/Scenes/levels/Level2.unity
+    path: Assets/Triktron/Scenes/levels/Level2-1.unity
     guid: 7fca50bda1e312b44a9170b133c2e03b
+  - enabled: 1
+    path: Assets/Triktron/Scenes/levels/Level3-1.unity
+    guid: b8fa77b7fec1e654995d441af109c218
   m_configObjects: {}

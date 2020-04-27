@@ -5,20 +5,28 @@ using UnityEngine;
 public class MouseLock : MonoBehaviour
 {
     public bool LockOnStart;
-#if !UNITY_EDITOR
+
     void Start()
     {
+        current = this;
+#if !UNITY_EDITOR
         if (LockOnStart)
             Lock();
         else
             Unlock();
-    }
 #endif
+    }
+
+
+    public static MouseLock current;
 
     public void Lock()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        if (!PauseMenu.Paused)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     public void Unlock()

@@ -16,6 +16,9 @@ public class Timer : MonoBehaviour
     public int BlinkTimes;
     public float BlinkDuration;
 
+    static public bool Paused;
+    static float PausedSince;
+
 
     static public bool IsRunning()
     {
@@ -24,6 +27,7 @@ public class Timer : MonoBehaviour
 
     static public float GetTime()
     {
+        if (Paused) return PausedSince - StartTime;
         if (Running) StopTime = Time.realtimeSinceStartup;
         return StopTime - StartTime;
     }
@@ -44,6 +48,24 @@ public class Timer : MonoBehaviour
             Running = false;
             StopTime = Time.realtimeSinceStartup;
             ShouldBlink = true;
+        }
+    }
+
+    static public void Pause()
+    {
+        if (!Paused)
+        {
+            Paused = true;
+            PausedSince = Time.realtimeSinceStartup;
+        }
+    }
+
+    static public void UnPause()
+    {
+        if (Paused)
+        {
+            Paused = false;
+            StartTime += Time.realtimeSinceStartup - PausedSince;
         }
     }
 

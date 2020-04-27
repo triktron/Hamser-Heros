@@ -26,14 +26,21 @@ public class Goal : MonoBehaviour
             component.isKinematic = true;
         }
 
-        Analytics.CustomEvent("level_one_timer", new Dictionary<string, object>
+        #if !UNITY_EDITOR
+        Analytics.CustomEvent("level_completed", new Dictionary<string, object>
         {
-            { "time_elapsed", Timer.GetTime() }
+            { "time_elapsed", Timer.GetTime() },
+            { "level",  SceneManager.GetActiveScene().name},
+            { "Dificulty", GameStateManager.GetDificultyName(GameStateManager.Dificulty) },
+            { "Tries", TriesCount.Tries }
         });
-        Analytics.FlushEvents();
 
-        Highscores.AddNewHighscore(GameStateManager.Username, Timer.GetTime(), GameStateManager.Dificulty, int.Parse(SceneManager.GetActiveScene().name.Remove(0, 5)));
-        
+        string[] levelAndType = SceneManager.GetActiveScene().name.Remove(0, 5).Split(new char[] { '-' }, System.StringSplitOptions.RemoveEmptyEntries);
+
+        Highscores.AddNewHighscore(GameStateManager.Username, Timer.GetTime(), GameStateManager.Dificulty, int.Parse(levelAndType[1]), int.Parse(levelAndType[0]));
+        #endif
+
+        TriesCount.Tries = 0;
 
         enabled = false;
     }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class Highscores : MonoBehaviour
 {
@@ -12,19 +13,29 @@ public class Highscores : MonoBehaviour
 	public Highscore[] highscoresList;
 	public static Highscores instance;
 
+	static float LastUploadTime = float.NegativeInfinity;
+	static float LastDownloadTime = float.NegativeInfinity;
+
+	public static float MinimumTimout = 2;
+
 	void Awake()
 	{
 			instance = this;
 	}
 
-	public static void AddNewHighscore(string username, float time, GameStateManager.Dificulties dif, int level)
+	public static void AddNewHighscore(string username, float time, GameStateManager.Dificulties dif, int level, int type)
 	{
-		instance.StartCoroutine(instance.UploadNewHighscore(username, time, dif, level));
+		if (Time.realtimeSinceStartup - LastUploadTime > MinimumTimout)
+		{
+			Debug.Log("Uploading score");
+			LastUploadTime = Time.realtimeSinceStartup;
+			instance.StartCoroutine(instance.UploadNewHighscore(username, time, dif, level, type));
+		}
 	}
 
-	IEnumerator UploadNewHighscore(string username, float time, GameStateManager.Dificulties dif, int level)
+	IEnumerator UploadNewHighscore(string username, float time, GameStateManager.Dificulties dif, int level, int type)
 	{
-		WWW www = new WWW(webURL + privateCode + "/add/" + WWW.EscapeURL(username) + "|" + GameStateManager.uuid + "|" + level + "|" + (int)dif + "/" + (int)(time * 1000));
+		WWW www = new WWW(webURL + privateCode + "/add/" + WWW.EscapeURL(username) + "|" + GameStateManager.uuid + "|" + type + "|" + level + "|" + (int)dif + "/-" + (int)(time * 1000));
 		yield return www;
 
 		if (string.IsNullOrEmpty(www.error))
@@ -41,7 +52,12 @@ public class Highscores : MonoBehaviour
 
 	public void DownloadHighscores(Action cb)
 	{
-		StartCoroutine(DownloadHighscoresFromDatabase(cb));
+		if (Time.realtimeSinceStartup - LastDownloadTime > MinimumTimout)
+		{
+			LastDownloadTime = Time.realtimeSinceStartup;
+			Debug.Log("Downloading score list");
+			StartCoroutine(DownloadHighscoresFromDatabase(cb));
+		}
 	}
 
 	IEnumerator DownloadHighscoresFromDatabase(Action cb)
@@ -69,11 +85,14 @@ public class Highscores : MonoBehaviour
 		{
 			string[] entryInfo = entries[i].Split(new char[] { '|' });
 			string username = entryInfo[0];
-			float time = int.Parse(entryInfo[4]) / 1000f;
-			GameStateManager.Dificulties dif = (GameStateManager.Dificulties)int.Parse(entryInfo[3]);
-			int level = int.Parse(entryInfo[2]);
-			highscoresList[i] = new Highscore(username, time, dif, level);
+			float time = -int.Parse(entryInfo[5]) / 1000f;
+			GameStateManager.Dificulties dif = (GameStateManager.Dificulties)int.Parse(entryInfo[4]);
+			int level = int.Parse(entryInfo[3]);
+			int type = int.Parse(entryInfo[2]);
+			highscoresList[i] = new Highscore(username, time, dif, level, type);
 		}
+
+		Array.Sort(highscoresList, new Comparison<Highscore>((i1, i2) => i1.time.CompareTo(i2.time)));
 	}
 
 }
@@ -84,13 +103,15 @@ public struct Highscore
 	public float time;
 	public GameStateManager.Dificulties dif;
 	public int level;
+	public int type;
 
-	public Highscore(string _username, float _time, GameStateManager.Dificulties _dif, int _level)
+	public Highscore(string _username, float _time, GameStateManager.Dificulties _dif, int _level, int _type)
 	{
 		username = _username;
 		time = _time;
 		dif = _dif;
 		level = _level;
+		type = _type;
 	}
 
 }

@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    static public Dificulties Dificulty = Dificulties.medium;
+    static public Dificulties Dificulty { 
+        get
+        {
+            return (Dificulties)PlayerPrefs.GetInt("Dificulty", (int)Dificulties.medium); 
+        }
+        
+        set
+        {
+            PlayerPrefs.SetInt("Dificulty", (int)value);
+        }
+    }
 
     public static string Username
     {
@@ -16,6 +26,19 @@ public class GameStateManager : MonoBehaviour
         set
         {
             PlayerPrefs.SetString("Name", value);
+        }
+    }
+
+    public static bool FistTime
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("FirstTime", 1) == 1;
+        }
+
+        set
+        {
+            PlayerPrefs.SetInt("FirstTime", value ? 1 : 0);
         }
     }
 
@@ -41,6 +64,16 @@ public class GameStateManager : MonoBehaviour
     {
         Dificulty = (Dificulties)dificulty;
     }
+
+    public void IncreaseDificulty()
+    {
+        if ((int)Dificulty < (int)Dificulties.expert) Dificulty = (Dificulties)((int)Dificulty + 1);
+    }
+    public void DecreaseDificulty()
+    {
+        if ((int)Dificulty > 0) Dificulty = (Dificulties)((int)Dificulty - 1);
+    }
+    
 
     static public float GetDificultyValueDrag()
     {

@@ -79,13 +79,18 @@ public class CameraFollowController : MonoBehaviour
 	void RotateCamereAngle(float angle)
 	{
 		//transform.Rotate(0, angle, 0);
-		Vector3 center = objectToFollow.position;
-		center.y = transform.transform.position.y;
+		
+		if (enabled && !PauseMenu.Paused)
+		{
+			Vector3 center = objectToFollow.position;
+			center.y = transform.transform.position.y;
 
-		LastTargetPos =  RotatePointAroundPivot(transform.transform.position, center, Vector3.up * angle);
-		transform.transform.position = LastTargetPos;
+			LastTargetPos = RotatePointAroundPivot(transform.transform.position, center, Vector3.up * angle);
+			transform.transform.position = LastTargetPos;
 
-		transform.LookAt(objectToFollow);
+			transform.LookAt(objectToFollow);
+		}
+		
 	}
 
 	Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles)
