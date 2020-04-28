@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4676,6 +4676,53 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -365.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 679204969320334855, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
+        type: 3}
+      propertyPath: m_PointAction
+      value: 
+      objectReference: {fileID: 1046548896148766850, guid: 5fba5869e3549d3469b8ae8a2872d02d,
+        type: 3}
+    - target: {fileID: 679204969320334855, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
+        type: 3}
+      propertyPath: m_LeftClickAction
+      value: 
+      objectReference: {fileID: 2587820934528780487, guid: 5fba5869e3549d3469b8ae8a2872d02d,
+        type: 3}
+    - target: {fileID: 679204969320334855, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
+        type: 3}
+      propertyPath: m_MiddleClickAction
+      value: 
+      objectReference: {fileID: 7787835824627699357, guid: 5fba5869e3549d3469b8ae8a2872d02d,
+        type: 3}
+    - target: {fileID: 679204969320334855, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
+        type: 3}
+      propertyPath: m_RightClickAction
+      value: 
+      objectReference: {fileID: 2031887735557965511, guid: 5fba5869e3549d3469b8ae8a2872d02d,
+        type: 3}
+    - target: {fileID: 679204969320334855, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
+        type: 3}
+      propertyPath: m_ScrollWheelAction
+      value: 
+      objectReference: {fileID: 8755705887696805457, guid: 5fba5869e3549d3469b8ae8a2872d02d,
+        type: 3}
+    - target: {fileID: 679204969320334855, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
+        type: 3}
+      propertyPath: m_SubmitAction
+      value: 
+      objectReference: {fileID: 3535185710388903599, guid: 5fba5869e3549d3469b8ae8a2872d02d,
+        type: 3}
+    - target: {fileID: 679204969320334855, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
+        type: 3}
+      propertyPath: m_CancelAction
+      value: 
+      objectReference: {fileID: 8245909922860253559, guid: 5fba5869e3549d3469b8ae8a2872d02d,
+        type: 3}
+    - target: {fileID: 679204970474991449, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1656856951187348274, guid: 64fb2ab1dd8f360499e25a2ee0dbd11f,
         type: 3}
