@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 161419576472483448}
   - component: {fileID: 161419576472483451}
   - component: {fileID: 161419576472483444}
-  - component: {fileID: 161419576472483445}
   - component: {fileID: 161419576472483442}
   m_Layer: 0
   m_Name: Player
@@ -113,27 +112,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &161419576472483444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161419576472483450}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533c9c7af6df7fd42a72fbf5dc42ddb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 20
-  GroundScanLength: 1.03
-  SlippyLayers:
-    serializedVersion: 2
-    m_Bits: 256
-  Paws: {fileID: 0}
-  IsOnGround: 0
---- !u!114 &161419576472483445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,117 +122,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 161419576472483450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 533c9c7af6df7fd42a72fbf5dc42ddb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 5fba5869e3549d3469b8ae8a2872d02d,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 161419576472483444}
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: 565c6e16-fa20-4234-be51-f38d9b3e8670
-    m_ActionName: Player/Move[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Look
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: 41e6d4da-27f4-414e-9bf5-1bf5f72e1d41
-    m_ActionName: Player/Look[/SwitchProControllerHID/rightStick,/Mouse/delta,/Pen/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4c938432-0f23-4aca-9667-13961972afbc
-    m_ActionName: Player/Fire[/SwitchProControllerHID/rightTrigger,/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0e37ca0f-d836-4a69-a270-814b3dea5e73
-    m_ActionName: UI/Navigate[/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/rightStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/rightStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/rightStick/left,/SwitchProControllerHID/leftStick/right,/SwitchProControllerHID/rightStick/right,/SwitchProControllerHID/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 9d123121-33a7-449b-8dbe-f7a2e82061a3
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a8c2ba08-f2b5-4d1e-a7eb-be1a46934fd9
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cf11f13f-aedb-49be-9d76-869fceb293fa
-    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 38e8a9a7-dd2c-43bc-89d5-ef58bce57643
-    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: da1f163f-234c-4e5c-86d5-885f7a21f583
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a0cf17c1-5c64-4a1e-a883-0f19c8082f9e
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3d5d0be6-7d95-4826-b2ce-07b571b6d0ea
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 845d299e-99d9-4de1-a284-076485631d8a
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 608cc69b-f2d6-496c-84cd-a8bec06fdd76
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Lock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_ActionId: aa00afdf-0393-478d-90c1-a3def6fc1b2e
-    m_ActionName: Player/MouseLock[/Mouse/leftButton]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard&Mouse
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  Speed: 20
+  GroundScanLength: 1.03
+  Cam: {fileID: 0}
 --- !u!114 &161419576472483442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3405bfc4401944f879ba1cb0228451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaneHeight: -60
+  PlaneHeight: -10
   animationHeight: 40
   cam: {fileID: 0}
 --- !u!114 &161419575541073592

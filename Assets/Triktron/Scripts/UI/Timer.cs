@@ -41,13 +41,13 @@ public class Timer : MonoBehaviour
         }
     }
 
-    static public void StopTimer()
+    static public void StopTimer(bool shouldBlink = true)
     {
         if (Running)
         {
             Running = false;
             StopTime = Time.realtimeSinceStartup;
-            ShouldBlink = true;
+            ShouldBlink = shouldBlink;
         }
     }
 

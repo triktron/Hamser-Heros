@@ -6,27 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
-    public MonoBehaviour[] ScriptToEnable;
-    public MonoBehaviour[] ScriptToDisable;
-    public Rigidbody[] BodiesToFreeze;
 
+    bool Reached;
     private void OnTriggerEnter(Collider other)
     {
-        Timer.StopTimer();
-        foreach (MonoBehaviour component in ScriptToEnable)
+        if (!Reached)
         {
-            component.enabled = true;
-        }
-        foreach (MonoBehaviour component in ScriptToDisable)
-        {
-            component.enabled = false;
-        }
-        foreach (Rigidbody component in BodiesToFreeze)
-        {
-            component.isKinematic = true;
-        }
+            Reached = true;
+            //Timer.StopTimer();
 
-        #if !UNITY_EDITOR
+#if !UNITY_EDITOR
         Analytics.CustomEvent("level_completed", new Dictionary<string, object>
         {
             { "time_elapsed", Timer.GetTime() },
@@ -38,10 +27,13 @@ public class Goal : MonoBehaviour
         string[] levelAndType = SceneManager.GetActiveScene().name.Remove(0, 5).Split(new char[] { '-' }, System.StringSplitOptions.RemoveEmptyEntries);
 
         Highscores.AddNewHighscore(GameStateManager.Username, Timer.GetTime(), GameStateManager.Dificulty, int.Parse(levelAndType[1]), int.Parse(levelAndType[0]));
-        #endif
+#endif
 
-        TriesCount.Tries = 0;
+            //TriesCount.Tries = 0;
 
-        enabled = false;
+            Manager.main.StartNextState();
+            enabled = false;
+        }
+        
     }
 }

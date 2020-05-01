@@ -5,8 +5,17 @@ more info to come soon (i hope)
 
 # Changelog
 
-## [0.0.8] - 2020-27-04
+## [0.0.9] - 2020-27-04
 > [play link](http://triktron.com/Hamser-Heros)
+
+### Added
+- soundtrack
+
+### Changed
+- Redid the internal system to be event based
+
+## [0.0.8] - 2020-27-04
+> [play link](http://triktron.com/Hamser-Heros/0.0.8)
 
 ### Added
 - a new level selecting system

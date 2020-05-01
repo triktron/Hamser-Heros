@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,24 +9,36 @@ public class PlayerController : MonoBehaviour
     public float Speed = 100;
 
     public float GroundScanLength;
-    public LayerMask SlippyLayers;
 
     Vector3 Movement;
     Rigidbody rb;
 
-    public ParticleSystem Paws;
+    ParticleSystem Paws;
 
-    public bool IsOnGround;
+    bool IsOnGround;
+
+    public CameraFollowController Cam;
 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        Paws = FindObjectOfType<ParticleSystem>();
+
+        Manager.main.StartAnimation.AddListener(FreezeBody);
+        Manager.main.Playing.AddListener(UnFreezeBody);
+        Manager.main.PlayerMove.AddListener(Move);
     }
 
-    private void Start()
+    private void UnFreezeBody(Transform arg0)
     {
+        rb.isKinematic = false;
         Timer.StartTimer();
+    }
+
+    private void FreezeBody(Transform arg0)
+    {
+        rb.isKinematic = true;
     }
 
 
@@ -41,14 +54,12 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(transform.position, Movement * 2, Color.magenta);
         Debug.DrawRay(transform.position, Vector3.down * GroundScanLength);
 
-        Paws.enableEmission = IsOnGround;
+        if (!Paws.isPlaying && IsOnGround) Paws.Play();
+        if (Paws.isPlaying && !IsOnGround) Paws.Stop();
     }
-
-    public void Move(InputAction.CallbackContext context)
+    public void Move(Vector2 input)
     {
         float angle = Camera.main.transform.rotation.eulerAngles.y;
-
-        var input = context.ReadValue<Vector2>();
 
         Vector3 forward = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle));
         Vector3 left = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), 0, -Mathf.Sin(Mathf.Deg2Rad * angle));

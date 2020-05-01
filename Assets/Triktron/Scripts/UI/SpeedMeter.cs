@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class SpeedMeter : MonoBehaviour
 {
     public Image Bar;
-    public Rigidbody Player;
     Material BarMat;
 
     public AnimationCurve curve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 1));
@@ -18,6 +17,6 @@ public class SpeedMeter : MonoBehaviour
 
     void Update()
     {
-        BarMat.SetFloat("_Velocety", curve.Evaluate(Player.velocity.sqrMagnitude));
+        if (Manager.main.Player != null) BarMat.SetFloat("_Velocety", curve.Evaluate(Manager.main.Player.GetComponent<Rigidbody>().velocity.sqrMagnitude));
     }
 }

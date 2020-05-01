@@ -5,15 +5,26 @@ using UnityEngine;
 public class StartAnimationCamera : MonoBehaviour
 {
     public Vector3 Offset;
-    public Transform Player;
+    Transform Target;
     public float Speed;
 
     public float MaxDeg;
     float CurrentDeg;
     public float OffsetDeg;
 
-    public MonoBehaviour[] ScriptToEnable;
-    public MonoBehaviour[] ScriptToDisable;
+    public void Awaken(Transform target)
+    {
+        Target = target;
+        enabled = true;
+        CurrentDeg = OffsetDeg;
+        Debug.Log("Starting Animation");
+
+        if (Timer.GetTime() != 0) Timer.StopTimer();
+    }
+    public void Sleep(Transform target)
+    {
+        enabled = false;
+    }
 
     void Start()
     {
@@ -26,19 +37,12 @@ public class StartAnimationCamera : MonoBehaviour
         CurrentDeg += Time.deltaTime * Speed;
         if (CurrentDeg >= MaxDeg) CurrentDeg = MaxDeg;
 
-        transform.position = Player.position + Quaternion.Euler(0, CurrentDeg, 0) * Offset;
-        transform.LookAt(Player);
+        transform.position = Target.position + Quaternion.Euler(0, CurrentDeg, 0) * Offset;
+        transform.LookAt(Target);
 
         if (CurrentDeg >= MaxDeg)
         {
-            foreach (MonoBehaviour component in ScriptToEnable)
-            {
-                component.enabled = true;
-            }
-            foreach (MonoBehaviour component in ScriptToDisable)
-            {
-                component.enabled = false;
-            }
+            Manager.main.StartNextState();
             enabled = false;
         }
     }

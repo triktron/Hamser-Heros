@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CopyRotation : MonoBehaviour
 {
-    public Transform Object;
+    Transform Object;
     ParticleSystem.MainModule ps;
     public Vector3 Offset;
     void Start()
@@ -15,7 +15,10 @@ public class CopyRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ps.startRotationZ = -(Object.rotation.eulerAngles.y) * Mathf.Deg2Rad;
-        transform.position = Object.position - Offset;
+        if (Manager.main.Player != null)
+        {
+            ps.startRotationZ = -(Manager.main.Player.transform.rotation.eulerAngles.y) * Mathf.Deg2Rad;
+            transform.position = Manager.main.Player.transform.position - Offset;
+        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PositionSetterShader : MonoBehaviour
 {
-    public Transform Object;
+    Transform Object;
     public GameObject[] ObjectsToSet;
 
     List<Material> Mat = new List<Material>();
@@ -21,8 +21,9 @@ public class PositionSetterShader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Material Obj in Mat)
-            Obj.SetVector("_pos", Object.position);
+        if (Manager.main.Player != null) 
+            foreach (Material Obj in Mat)
+                Obj.SetVector("_pos", Manager.main.Player.transform.position);
     }
 
     public void SetDistance(float dist)
