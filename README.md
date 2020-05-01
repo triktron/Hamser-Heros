@@ -10,6 +10,8 @@ more info to come soon (i hope)
 
 ### Added
 - soundtrack
+- a charachter controler based player
+- a fps meter (press g)
 
 ### Changed
 - Redid the internal system to be event based

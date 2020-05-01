@@ -19,6 +19,14 @@ public class Timer : MonoBehaviour
     static public bool Paused;
     static float PausedSince;
 
+    static public void ResetTimer()
+    {
+        UnPause();
+        StopTimer(false);
+        StartTime = 0;
+        StopTime = 0;
+    }
+
 
     static public bool IsRunning()
     {

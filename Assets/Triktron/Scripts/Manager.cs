@@ -74,6 +74,7 @@ public class Manager : MonoBehaviour
 
     public void NextLevel()
     {
+        Timer.ResetTimer();
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 

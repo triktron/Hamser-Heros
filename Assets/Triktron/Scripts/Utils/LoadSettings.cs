@@ -30,6 +30,8 @@ public class LoadSettings : MonoBehaviour
         Manager.main.Player.transform.position = PlayerStartPoint.position;
         Manager.main.Player.transform.rotation = PlayerStartPoint.rotation;
 
+        Timer.ResetTimer();
+
         Manager.main.StartNextState();
     }
 }
