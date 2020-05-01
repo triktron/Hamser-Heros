@@ -5,7 +5,7 @@ using UnityEngine;
 public class CatAnimationController : MonoBehaviour
 {
     Animator m_Animator;
-    public Rigidbody rb;
+    public Velocety VelocetyScript;
 
     public float IdleTime = 2;
     float CurrentIdleTime;
@@ -22,10 +22,10 @@ public class CatAnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_Animator.SetFloat("WalkSpeed", AnimationSpeedMultiplier.Evaluate(rb.velocity.magnitude));
+        m_Animator.SetFloat("WalkSpeed", AnimationSpeedMultiplier.Evaluate(VelocetyScript.Speed));
 
 
-        if (rb.velocity.magnitude > MaxSpeed)
+        if (VelocetyScript.Speed > MaxSpeed)
         {
             m_Animator.ResetTrigger("Sit");
             m_Animator.ResetTrigger("Idle");

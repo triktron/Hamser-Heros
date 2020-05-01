@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
     {
         Paused = true;
         MouseLock.current.Unlock();
-        Debug.Log("pusing");
+        Debug.Log("pausing");
         Timer.Pause();
         GetComponent<RectTransform>().localPosition = new Vector3(0, -35.2f);
         Time.timeScale = 0;

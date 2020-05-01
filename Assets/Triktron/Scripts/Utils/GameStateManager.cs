@@ -7,12 +7,12 @@ public class GameStateManager : MonoBehaviour
     static public Dificulties Dificulty { 
         get
         {
-            return (Dificulties)PlayerPrefs.GetInt("Dificulty", (int)Dificulties.medium); 
+            return (Dificulties)PlayerPrefs.GetInt("Difficulty", (int)Dificulties.medium); 
         }
         
         set
         {
-            PlayerPrefs.SetInt("Dificulty", (int)value);
+            PlayerPrefs.SetInt("Difficulty", (int)value);
         }
     }
 
@@ -54,6 +54,7 @@ public class GameStateManager : MonoBehaviour
 
     public enum Dificulties
     {
+        CC,
         easy,
         medium,
         hard,
@@ -77,7 +78,7 @@ public class GameStateManager : MonoBehaviour
 
     static public float GetDificultyValueDrag()
     {
-        if (Dificulty == Dificulties.easy) return 1f;
+        if (Dificulty == Dificulties.easy || Dificulty == Dificulties.CC) return 1f;
         if (Dificulty == Dificulties.medium) return 0.5f;
         if (Dificulty == Dificulties.hard) return 0.2f;
         return 0f;
@@ -86,13 +87,14 @@ public class GameStateManager : MonoBehaviour
     static public float GetDificultyValueVisibilety()
     {
         if (Dificulty == Dificulties.easy) return -7f;
-        if (Dificulty == Dificulties.medium) return -2.3f;
+        if (Dificulty == Dificulties.medium || Dificulty == Dificulties.CC) return -2.3f;
         if (Dificulty == Dificulties.hard) return -1.5f;
         return -0.8f;
     }
 
     static public string GetDificultyName(Dificulties dificulty)
     {
+        if (dificulty == Dificulties.CC) return "Character Controller";
         if (dificulty == Dificulties.easy) return "easy";
         if (dificulty == Dificulties.medium) return "medium";
         if (dificulty == Dificulties.hard) return "hard";

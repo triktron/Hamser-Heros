@@ -8,7 +8,7 @@ public class DificultyPicker : EditorWindow
     public Transform Root;
 
     // Add menu named "My Window" to the Window menu
-    [MenuItem("tools/Dificulty Picker")]
+    [MenuItem("tools/Difficulty Picker")]
     static void Init()
     {
         // Get existing open window or if none, make a new one:

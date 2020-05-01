@@ -252,6 +252,7 @@ MonoBehaviour:
   followSpeed: 10
   lookSpeed: 10
   ManualRotateSpeed: 30
+  UpdateFixed: 1
   Stationary: 0
   Mode: 3
 --- !u!1 &2228074417019424977
@@ -2185,6 +2186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Material: {fileID: 13400000, guid: 85accc9eaca251f47871a878d52b7f00, type: 2}
   Player: {fileID: 161419576472483450, guid: 044df1db490037042ae10a5daa03cfa0, type: 3}
+  PlayerCC: {fileID: 2998100548826615533, guid: bb21902777e31914481a02bf6e7e7539,
+    type: 3}
   PlayerStartPoint: {fileID: 6290614534656945814}
 --- !u!1 &8394759768706794575
 GameObject:

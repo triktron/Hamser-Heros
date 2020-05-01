@@ -13,14 +13,14 @@ public class Goal : MonoBehaviour
         if (!Reached)
         {
             Reached = true;
-            //Timer.StopTimer();
+            Timer.StopTimer();
 
 #if !UNITY_EDITOR
         Analytics.CustomEvent("level_completed", new Dictionary<string, object>
         {
             { "time_elapsed", Timer.GetTime() },
             { "level",  SceneManager.GetActiveScene().name},
-            { "Dificulty", GameStateManager.GetDificultyName(GameStateManager.Dificulty) },
+            { "Difficulty", GameStateManager.GetDificultyName(GameStateManager.Dificulty) },
             { "Tries", TriesCount.Tries }
         });
 
@@ -29,7 +29,7 @@ public class Goal : MonoBehaviour
         Highscores.AddNewHighscore(GameStateManager.Username, Timer.GetTime(), GameStateManager.Dificulty, int.Parse(levelAndType[1]), int.Parse(levelAndType[0]));
 #endif
 
-            //TriesCount.Tries = 0;
+            TriesCount.Tries = 0;
 
             Manager.main.StartNextState();
             enabled = false;

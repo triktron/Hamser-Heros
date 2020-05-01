@@ -17,6 +17,6 @@ public class SpeedMeter : MonoBehaviour
 
     void Update()
     {
-        if (Manager.main.Player != null) BarMat.SetFloat("_Velocety", curve.Evaluate(Manager.main.Player.GetComponent<Rigidbody>().velocity.sqrMagnitude));
+        if (Manager.main.Player != null && Manager.main.Player.GetComponent<Velocety>() != null) BarMat.SetFloat("_Velocety", curve.Evaluate(Manager.main.Player.GetComponent<Velocety>().Speed));
     }
 }

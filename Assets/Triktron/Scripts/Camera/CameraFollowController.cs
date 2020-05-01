@@ -11,6 +11,8 @@ public class CameraFollowController : MonoBehaviour
 	public float lookSpeed = 10;
 	public float ManualRotateSpeed = 50;
 
+	public bool UpdateFixed = true;
+
 	public enum Modes
 	{
 		Default,
@@ -29,7 +31,7 @@ public class CameraFollowController : MonoBehaviour
 	public void Awaken(Transform target)
 	{
 		Target = target;
-		target.GetComponent<PlayerController>().Cam = this;
+		if (target.GetComponent<PlayerController>() != null) target.GetComponent<PlayerController>().Cam = this;
 		LastTargetPos = transform.position;
 		enabled = true;
 	}
@@ -46,6 +48,8 @@ public class CameraFollowController : MonoBehaviour
 		transform.rotation = Quaternion.Lerp(transform.rotation, _rot, lookSpeed * Time.deltaTime);
 	}
 
+
+	Vector3 velocity;
 	public void MoveToTarget()
 	{
 
@@ -74,7 +78,8 @@ public class CameraFollowController : MonoBehaviour
 
 
 		Debug.DrawLine(Target.position, _targetPos);
-		transform.position = Vector3.Lerp(transform.position, _targetPos, followSpeed * Time.deltaTime);
+		//transform.position = Vector3.Lerp(transform.position, _targetPos, followSpeed * Time.deltaTime);
+		transform.position = Vector3.SmoothDamp(transform.position, _targetPos, ref velocity, 0.3F);
 		LastTargetPos = _targetPos;
 	}
 
@@ -108,7 +113,19 @@ public class CameraFollowController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		LookAtTarget();
-		if (!Stationary) MoveToTarget();
+		if (UpdateFixed)
+		{
+			LookAtTarget();
+			if (!Stationary) MoveToTarget();
+		}
+	}
+
+	private void LateUpdate()
+	{
+		if (!UpdateFixed)
+		{
+			LookAtTarget();
+			if (!Stationary) MoveToTarget();
+		}
 	}
 }

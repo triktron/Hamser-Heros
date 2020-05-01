@@ -15,7 +15,7 @@ more info to come soon (i hope)
 - Redid the internal system to be event based
 
 ## [0.0.8] - 2020-27-04
-> [play link](http://triktron.com/Hamser-Heros/0.0.8)
+> [play link](https://triktron.com/Hamser-Heros/0.0.8)
 
 ### Added
 - a new level selecting system
@@ -33,7 +33,7 @@ more info to come soon (i hope)
 
 
 ## [0.0.7] - 2020-25-04
-> [play link](http://triktron.com/Hamser-Heros/0.0.7)
+> [play link](https://triktron.com/Hamser-Heros/0.0.7)
 
 ### Added
 - a reload button for the score board
@@ -44,7 +44,7 @@ more info to come soon (i hope)
 - score numbering not counting correct
 
 ## [0.0.6] - 2020-24-04
-> [play link](http://triktron.com/Hamser-Heros0.0.7)
+> [play link](https://triktron.com/Hamser-Heros0.0.7)
 
 ### Added
 - speed bar
@@ -60,7 +60,7 @@ more info to come soon (i hope)
 - the scoreboard was storing your worst time, its fixed now
 
 ## [0.0.5] - 2020-23-04
-> [play link](http://triktron.com/Hamser-Heros/0.0.5)
+> [play link](https://triktron.com/Hamser-Heros/0.0.5)
 
 ### Added
 - platforms that show or hide depending on difficulty
@@ -70,7 +70,7 @@ more info to come soon (i hope)
 - mouse not releasing after returning to the menu
 
 ## [0.0.4] - 2020-22-04
-> [play link](http://triktron.com/Hamser-Heros/0.0.4)
+> [play link](https://triktron.com/Hamser-Heros/0.0.4)
 
 ### Added
 - highscore system
@@ -82,7 +82,7 @@ more info to come soon (i hope)
 - fixed the menu size (for good i hope)
 
 ## [0.0.3] - 2020-21-04
-> [play link](http://triktron.com/Hamser-Heros/0.0.3)
+> [play link](https://triktron.com/Hamser-Heros/0.0.3)
 
 ### Added
 - cat paw trail
@@ -96,7 +96,7 @@ more info to come soon (i hope)
 - paws now only show on the ground, not midair.
 
 ## [0.0.2] - 2020-21-04
-> [play link](http://triktron.com/Hamser-Heros/0.0.2)
+> [play link](https://triktron.com/Hamser-Heros/0.0.2)
 
 ### Added
 - start timer
@@ -110,7 +110,7 @@ more info to come soon (i hope)
 
 
 ## [0.0.1] - 2020-21-04
-> [play link](http://triktron.com/Hamser-Heros/0.0.1)
+> [play link](https://triktron.com/Hamser-Heros/0.0.1)
 
 ### Added
 

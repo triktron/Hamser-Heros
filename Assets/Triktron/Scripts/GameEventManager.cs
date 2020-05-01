@@ -23,6 +23,8 @@ public class GameEventManager
     {
     }
 
+    string beacus;
+
     public UnityEvent LoadSettings = new UnityEvent();
     public UnityEventTransform StartAnimation = new UnityEventTransform();
     public UnityEventTransform Playing = new UnityEventTransform();

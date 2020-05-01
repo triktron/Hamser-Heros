@@ -52,6 +52,7 @@ public class menu : MonoBehaviour
             MenuGroup.alpha = 0;
             MenuGroup.interactable = false;
             FirstTimeWindow.localPosition = Vector3.zero;
+            NicknameFirst.Select();
         }
     }
 

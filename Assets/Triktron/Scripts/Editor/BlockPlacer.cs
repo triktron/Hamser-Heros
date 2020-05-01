@@ -56,7 +56,7 @@ public class BlockPlacer : EditorWindow
 
         tilted = EditorGUILayout.Toggle("tilt", tilted);
 
-        if (GUILayout.Button("togle hidden")) ToggleHidden();
+        if (GUILayout.Button("toggle hidden")) ToggleHidden();
 
             EditorGUILayout.EndVertical();
     }

@@ -86,7 +86,7 @@ Material:
     - _Strength: 0.2
     - _Surface: 0
     - _UseUIAlphaClip: 0
-    - _Velocety: 0.20459157
+    - _Velocety: 0
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
