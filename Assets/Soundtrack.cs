@@ -7,7 +7,14 @@ public class Soundtrack : MonoBehaviour
     public AudioClip[] Soundtracks;
     void Start()
     {
-        GetComponent<AudioSource>().clip = Soundtracks[Random.Range(0, Soundtracks.Length)];
-        GetComponent<AudioSource>().Play();
+        if (FindObjectOfType<Soundtrack>() != this)
+        {
+            Destroy(gameObject);
+        } else
+        {
+            GetComponent<AudioSource>().clip = Soundtracks[Random.Range(0, Soundtracks.Length)];
+            GetComponent<AudioSource>().Play();
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

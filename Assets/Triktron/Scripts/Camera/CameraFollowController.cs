@@ -115,8 +115,12 @@ public class CameraFollowController : MonoBehaviour
 	{
 		if (UpdateFixed)
 		{
-			LookAtTarget();
-			if (!Stationary) MoveToTarget();
+			if (Target == null) Sleep(transform);
+			else
+			{
+				LookAtTarget();
+				if (!Stationary) MoveToTarget();
+			}
 		}
 	}
 
@@ -124,8 +128,12 @@ public class CameraFollowController : MonoBehaviour
 	{
 		if (!UpdateFixed)
 		{
-			LookAtTarget();
-			if (!Stationary) MoveToTarget();
+			if (Target == null) Sleep(transform);
+			else
+			{
+				LookAtTarget();
+				if (!Stationary) MoveToTarget();
+			}
 		}
 	}
 }
