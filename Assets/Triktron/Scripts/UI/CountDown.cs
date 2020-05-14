@@ -7,12 +7,17 @@ public class CountDown : MonoBehaviour
 {
     public int Number = 1;
 
+    public AudioClip Clip1;
+    public AudioClip Clip2;
+
+    AudioSource AS;
+
     Image Number1;
     Image Number2;
     Image Number3;
     Image NumberGO;
 
-    float LastTime;
+    float LastTime = float.MaxValue;
     public float TimerPerDiget = 2;
     void Start()
     {
@@ -20,7 +25,9 @@ public class CountDown : MonoBehaviour
         Number2 = gameObject.transform.Find("2").GetComponent<Image>();
         Number3 = gameObject.transform.Find("3").GetComponent<Image>();
         NumberGO = gameObject.transform.Find("go").GetComponent<Image>();
-        Number = 1;
+        Number = 0;
+
+        AS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,10 +37,11 @@ public class CountDown : MonoBehaviour
         {
             LastTime = 0;
             Number++;
+
+            SetNumber();
         }
         LastTime += Time.deltaTime;
 
-        SetNumber();
 
         if (Number >= 5) enabled = false;
     }
@@ -44,5 +52,7 @@ public class CountDown : MonoBehaviour
         Number2.enabled = Number == 2;
         Number3.enabled = Number == 1;
         NumberGO.enabled = Number == 4;
+
+        if (Number <= 4) AS.PlayOneShot(Number != 4 ? Clip1 : Clip2);
     }
 }

@@ -12,6 +12,9 @@ public class CameraFollowController : MonoBehaviour
 	public float ManualRotateSpeed = 50;
 
 	public bool UpdateFixed = true;
+	public bool DisableRotation = false;
+
+	public bool disable;
 
 	public enum Modes
 	{
@@ -30,10 +33,13 @@ public class CameraFollowController : MonoBehaviour
 
 	public void Awaken(Transform target)
 	{
-		Target = target;
-		if (target.GetComponent<PlayerController>() != null) target.GetComponent<PlayerController>().Cam = this;
-		LastTargetPos = transform.position;
-		enabled = true;
+		if (!disable)
+		{
+			Target = target;
+			if (target.GetComponent<PlayerController>() != null) target.GetComponent<PlayerController>().Cam = this;
+			LastTargetPos = transform.position;
+			enabled = true;
+		}
 	}
 
 	public void Sleep(Transform target)
@@ -79,7 +85,7 @@ public class CameraFollowController : MonoBehaviour
 
 		Debug.DrawLine(Target.position, _targetPos);
 		//transform.position = Vector3.Lerp(transform.position, _targetPos, followSpeed * Time.deltaTime);
-		transform.position = Vector3.SmoothDamp(transform.position, _targetPos, ref velocity, 0.3F);
+		transform.position = Vector3.SmoothDamp(transform.position, _targetPos, ref velocity, followSpeed);
 		LastTargetPos = _targetPos;
 	}
 
@@ -118,7 +124,7 @@ public class CameraFollowController : MonoBehaviour
 			if (Target == null) Sleep(transform);
 			else
 			{
-				LookAtTarget();
+				if (!DisableRotation) LookAtTarget();
 				if (!Stationary) MoveToTarget();
 			}
 		}
@@ -131,7 +137,7 @@ public class CameraFollowController : MonoBehaviour
 			if (Target == null) Sleep(transform);
 			else
 			{
-				LookAtTarget();
+				if (!DisableRotation) LookAtTarget();
 				if (!Stationary) MoveToTarget();
 			}
 		}

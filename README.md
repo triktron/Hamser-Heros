@@ -5,8 +5,26 @@ more info to come soon (i hope)
 
 # Changelog
 
+## [0.1.0] - 2020-14-05
+> [play link](http://triktron.com/Hamser-Heros/)
+
+### Added
+- an achivement system
+- a debug graph for visualizing speed impact
+- a basic vr mode
+- coins to collect
+- a level buying system
+- a fan
+- 3 new levels
+- sound effects
+
+### Changed
+- combined roads into one mesh for better performance
+- cross fade between scenes
+- game internals are now event based
+
 ## [0.0.9] - 2020-27-04
-> [play link](http://triktron.com/Hamser-Heros)
+> [play link](http://triktron.com/Hamser-Heros/0.0.9)
 
 ### Added
 - soundtrack

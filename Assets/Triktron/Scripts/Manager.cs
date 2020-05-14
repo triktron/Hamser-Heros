@@ -75,11 +75,15 @@ public class Manager : MonoBehaviour
     public void NextLevel()
     {
         Timer.ResetTimer();
-        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        SceneLoader.main.LoadLevel("Menu");
     }
 
     public void Move(InputAction.CallbackContext context)
     {
         PlayerMove.Invoke(context.ReadValue<Vector2>());
+    }
+    public void Move(Vector2 axis)
+    {
+        PlayerMove.Invoke(axis);
     }
 }

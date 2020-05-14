@@ -18,8 +18,7 @@ public class PlayerController : MonoBehaviour
     bool IsOnGround;
 
     public CameraFollowController Cam;
-
-
+    public Transform CamTransform;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -44,27 +43,36 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        float angle = Camera.main.transform.rotation.eulerAngles.y;
+        if (CamTransform == null && Cam != null) CamTransform = Cam.transform;
+        if (CamTransform != null)
+        {
+            float angle = CamTransform.rotation.eulerAngles.y;
 
-        Vector3 forward = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle));
-        Vector3 left = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), 0, -Mathf.Sin(Mathf.Deg2Rad * angle));
+            Vector3 forward = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle));
+            Vector3 left = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), 0, -Mathf.Sin(Mathf.Deg2Rad * angle));
 
-        Debug.DrawRay(transform.position, forward * 2, Color.red);
-        Debug.DrawRay(transform.position, left * 2, Color.green);
-        Debug.DrawRay(transform.position, Movement * 2, Color.magenta);
-        Debug.DrawRay(transform.position, Vector3.down * GroundScanLength);
+            Debug.DrawRay(transform.position, forward * 2, Color.red);
+            Debug.DrawRay(transform.position, left * 2, Color.green);
+            Debug.DrawRay(transform.position, Movement * 2, Color.magenta);
+            Debug.DrawRay(transform.position, Vector3.down * GroundScanLength);
+        }
 
         if (!Paws.isPlaying && IsOnGround) Paws.Play();
         if (Paws.isPlaying && !IsOnGround) Paws.Stop();
     }
     public void Move(Vector2 input)
     {
-        float angle = Camera.main.transform.rotation.eulerAngles.y;
+        if (CamTransform == null && Cam != null) CamTransform = Cam.transform;
+        Debug.Log("hitting");
+        if (CamTransform != null)
+        {
+            float angle = CamTransform.rotation.eulerAngles.y;
 
-        Vector3 forward = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle));
-        Vector3 left = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), 0, -Mathf.Sin(Mathf.Deg2Rad * angle));
+            Vector3 forward = new Vector3(Mathf.Sin(Mathf.Deg2Rad * angle), 0, Mathf.Cos(Mathf.Deg2Rad * angle));
+            Vector3 left = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), 0, -Mathf.Sin(Mathf.Deg2Rad * angle));
 
-        Movement = input.x * left + input.y * forward;
+            Movement = input.x * left + input.y * forward;
+        }
     }
 
     bool IsOnLayerMask(int layer, LayerMask mask)

@@ -42,6 +42,33 @@ public class GameStateManager : MonoBehaviour
         }
     }
 
+    public static bool VRMode
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("VRMode", 0) == 1;
+        }
+
+        set
+        {
+            Debug.Log(value);
+            PlayerPrefs.SetInt("VRMode", value ? 1 : 0);
+        }
+    }
+
+    public static int Coins
+    {
+        get
+        {
+            return PlayerPrefs.GetInt("Coins", 0);
+        }
+
+        set
+        {
+            PlayerPrefs.SetInt("Coins", value);
+        }
+    }
+
     public static string uuid
     {
         get

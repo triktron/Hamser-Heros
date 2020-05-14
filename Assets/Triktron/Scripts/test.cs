@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public LayerMask layermask;
+    public int number;
+
     public void pls(Transform player)
     {
         Debug.Log("Test Started" + player);

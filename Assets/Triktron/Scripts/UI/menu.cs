@@ -24,8 +24,11 @@ public class menu : MonoBehaviour
     public Scrollbar Scrollbar;
     [Header("settings")]
     public TMP_InputField Nickname;
+    public Text VRModeToggle;
     [Header("level")]
     public Text DificultyBar;
+    public UpdateLevelSelector UpdateLevelSelector;
+    public Text CoinCount;
     [Header("First Time")]
     public RectTransform FirstTimeWindow;
     public TMP_InputField NicknameFirst;
@@ -34,9 +37,13 @@ public class menu : MonoBehaviour
 
     RectTransform Canvas;
 
+    public void OpenAchivements()
+    {
+        FindObjectOfType<AchievenmentListIngame>().Open();
+    }
+
     private void Start()
     {
-        Nickname.text = GameStateManager.Username;
         if (GameStateManager.Username != "Anonymous") NicknameFirst.text = GameStateManager.Username;
         LoadScores();
         Canvas = GetComponent<RectTransform>();
@@ -45,7 +52,11 @@ public class menu : MonoBehaviour
         ExitBtn.SetActive(false);
 #endif
 
+        updateSettingsUI();
+
         UpdateDificultyDisplay();
+
+        UpdateCoinCount();
 
         if (GameStateManager.FistTime)
         {
@@ -54,6 +65,18 @@ public class menu : MonoBehaviour
             FirstTimeWindow.localPosition = Vector3.zero;
             NicknameFirst.Select();
         }
+    }
+
+    void updateSettingsUI()
+    {
+        Nickname.text = GameStateManager.Username;
+        VRModeToggle.text = "VR Mode is " + (GameStateManager.VRMode ? "ON" : "OFF");
+    }
+
+    public void ToggleVRMode()
+    {
+        GameStateManager.VRMode = !GameStateManager.VRMode;
+        updateSettingsUI();
     }
 
     public void CloseFirst(bool save = true)
@@ -121,6 +144,11 @@ public class menu : MonoBehaviour
         DificultyBar.text = GameStateManager.GetDificultyName(GameStateManager.Dificulty);
     }
 
+    public void UpdateCoinCount()
+    {
+        CoinCount.text = "You have " + GameStateManager.Coins +" coins";
+    }
+
     int lastLeanId = -1;
 
 
@@ -153,9 +181,26 @@ public class menu : MonoBehaviour
 
     public void openLevel()
     {
-        int row = EventSystem.current.currentSelectedGameObject.transform.parent.GetSiblingIndex() + 1;
-        int level = EventSystem.current.currentSelectedGameObject.transform.GetSiblingIndex() + 1;
-        Debug.Log(row + " - " + level);
-        SceneManager.LoadScene("level" + row + "-" + level, LoadSceneMode.Single);
+        
+        LevelUnlockeble data = EventSystem.current.currentSelectedGameObject.GetComponent<LevelUnlockeble>();
+        
+        if (data.Unlocked)
+        {
+            AchievementManager.instance.AddAchievementProgress("games", 1);
+            Debug.Log(data.Name);
+            SceneLoader.main.LoadLevel("level" + data.Name);
+        }
+        else if (data.Selecteble)
+        {
+            Debug.Log("trying to buy");
+            if (GameStateManager.Coins >= data.Cost)
+            {
+                GameStateManager.Coins -= data.Cost;
+                PlayerPrefs.SetInt("Level" + data.Name + "Unlocked", 1);
+                UpdateCoinCount();
+                AchievementManager.instance.AddAchievementProgress("completed", 1);
+                UpdateLevelSelector.UpdateUI();
+            }
+        }
     }
 }

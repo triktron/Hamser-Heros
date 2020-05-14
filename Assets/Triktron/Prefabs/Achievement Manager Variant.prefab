@@ -1,0 +1,868 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!222 &656675173006126877
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058889756995853810}
+  m_CullTransparentMesh: 0
+--- !u!1001 &7334533799639581475
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 592392606595484462, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292894177777281744, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292894177777281744, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292894177777281744, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 181.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292894177777281744, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -398.23502
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292894177777281744, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 363.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480437008952652415, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480437008952652415, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480437008952652415, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 181.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480437008952652415, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480437008952652415, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 142.56668
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480437008952652415, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828578816107798556, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828700596380768718, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869116409126469268, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063367083816, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063367083816, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063367083816, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 247.52501
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063367083816, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063367083816, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 232.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063367083816, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063796210060, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063796210060, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063796210060, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 181.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063796210060, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893063796210060, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 363.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064589555811, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991959, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_Name
+      value: Achievement Manager Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: States.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].Spoiler
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].Key
+      value: games
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].DisplayName
+      value: 10 Games Played
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].Description
+      value: You played 10 Games!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: States.Array.data[0].Progress
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: States.Array.data[0].LastProgressUpdate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: States.Array.data[0].Achieved
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: States.Array.data[1].Progress
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: States.Array.data[1].LastProgressUpdate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: States.Array.data[1].Unlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: States.Array.data[2].Progress
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].LockedIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 24d0082db3d21fb4bb8470bb70b2b0ca,
+        type: 3}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].AchievedIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 3846ceee05c98b048bb40fb7312a3a79,
+        type: 3}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].UnspoilAfterUnlock
+      value: 50 Games Played
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].ProgressGoal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[0].NotificationFrequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[1].Key
+      value: games
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[1].DisplayName
+      value: 50 Games Played
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[1].Description
+      value: You played 50 Games!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[1].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[1].UnspoilAfterUnlock
+      value: 100 Games Played
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[1].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[1].ProgressGoal
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[1].NotificationFrequency
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[2].Key
+      value: games
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[2].DisplayName
+      value: 100 Games Played
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[2].Description
+      value: You played 100 Games!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[2].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[2].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[2].ProgressGoal
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[2].NotificationFrequency
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[3].Key
+      value: died
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[3].DisplayName
+      value: Die 10 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[3].Description
+      value: You died 10 Times!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[3].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[3].ProgressGoal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[4].Key
+      value: died
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[4].DisplayName
+      value: Die 20 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[4].Description
+      value: You died 20 Times!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[4].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[4].UnspoilAfterUnlock
+      value: Die 50 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[4].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[4].ProgressGoal
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[4].NotificationFrequency
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[5].Key
+      value: died
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[5].DisplayName
+      value: Die 50 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[5].Description
+      value: You died 50 Times!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[5].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[5].UnspoilAfterUnlock
+      value: Die 100 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[5].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[5].ProgressGoal
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[5].NotificationFrequency
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[6].Key
+      value: died
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[6].DisplayName
+      value: Die 100 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[6].Description
+      value: You died 100 Times!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[6].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[6].UnspoilAfterUnlock
+      value: Die 500 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[6].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[6].ProgressGoal
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[6].NotificationFrequency
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[7].Key
+      value: died
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[7].DisplayName
+      value: Die 500 times
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[7].Description
+      value: You died 100 Times! you are now in hell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[7].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[7].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[7].ProgressGoal
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[7].NotificationFrequency
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[8].Key
+      value: coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[8].DisplayName
+      value: Collect 10 Coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[8].Description
+      value: its the start of getting rich!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[8].UnspoilAfterUnlock
+      value: Collect 20 Coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[8].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[8].ProgressGoal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[8].NotificationFrequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[9].Key
+      value: coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[9].DisplayName
+      value: Collect 20 Coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[9].Description
+      value: Still some way to go but you are getting there!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[9].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[9].UnspoilAfterUnlock
+      value: Collect 40 Coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[9].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[9].ProgressGoal
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[9].NotificationFrequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[10].Key
+      value: coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[10].DisplayName
+      value: Collect 40 Coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[10].Description
+      value: just one small step for man, and another small step towards riches
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[10].Spoiler
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[10].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[10].ProgressGoal
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[10].NotificationFrequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[11].Key
+      value: completed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[11].DisplayName
+      value: Levels Unlocked
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[11].Description
+      value: Trying to finish the game eh? thx mates
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[11].Progression
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[11].ProgressGoal
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991960, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: AchievementList.Array.data[11].NotificationFrequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 522
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 222.45755
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.520151
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991961, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991962, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: OpenMenuKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064832991962, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064881311957, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064881311957, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064881311957, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 65.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064881311957, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064881311957, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 131.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869893064881311957, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938667314797307658, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938667314797307658, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938667314797307658, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 181.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938667314797307658, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -207.92001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938667314797307658, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 363.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938704051228999786, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938704051228999786, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938808289404583416, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938947907486899010, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938947907486899010, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938947907486899010, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 55.283337
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938947907486899010, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938947907486899010, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 110.56667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938947907486899010, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938994040409916176, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -313.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938994040409916176, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -303.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939228463576693256, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691303702128120151, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691303702128120151, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691303702128120151, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 308.4167
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691303702128120151, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691303702128120151, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 110.56667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8691303702128120151, guid: 31c71d95d8fbeb7479842253d3964958,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 35.21
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5831711471053085860, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 31c71d95d8fbeb7479842253d3964958, type: 3}
+--- !u!1 &4058889756995853810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6745667783304453841, guid: 31c71d95d8fbeb7479842253d3964958,
+    type: 3}
+  m_PrefabInstance: {fileID: 7334533799639581475}
+  m_PrefabAsset: {fileID: 0}

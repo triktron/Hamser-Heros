@@ -8,6 +8,7 @@ public class death : MonoBehaviour
     public float PlaneHeight = -20;
     public float animationHeight = 50;
     public CameraFollowController cam;
+    bool achivementAdded;
     void Start()
     {
         
@@ -18,9 +19,14 @@ public class death : MonoBehaviour
     {
         if (transform.position.y < PlaneHeight)
         {
-            Camera.main.GetComponent<CameraFollowController>().Stationary = true;
+            if (!achivementAdded)
+            {
+                achivementAdded = true;
+                if (AchievementManager.instance != null) AchievementManager.instance.AddAchievementProgress("died", 1);
+            }
+            if (Manager.main.Player && Manager.main.Player.GetComponent<PlayerController>() != null && Manager.main.Player.GetComponent<PlayerController>().Cam) Manager.main.Player.GetComponent<PlayerController>().Cam.Stationary = true;
 
-            if (transform.position.y < PlaneHeight - animationHeight) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (transform.position.y < PlaneHeight - animationHeight) SceneLoader.main.LoadLevel(SceneManager.GetActiveScene().name);
         }
     }
 }
